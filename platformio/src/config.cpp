@@ -27,7 +27,7 @@
 //       functionality.
 //
 // ADC pin used to measure battery voltage
-const uint8_t PIN_BAT_ADC  = A2; // A0 for micro-usb firebeetle
+const uint8_t PIN_BAT_ADC  = T2; // A0 for micro-usb firebeetle
 // Pins for E-Paper Driver Board
 const uint8_t PIN_EPD_BUSY = 14; // 5 for micro-usb firebeetle
 const uint8_t PIN_EPD_CS   = 13;
@@ -44,14 +44,18 @@ const uint8_t PIN_BME_PWR =  4;   // Irrelevant if directly connected to 3.3V
 const uint8_t BME_ADDRESS = 0x76; // If sensor does not work, try 0x77
 
 // WIFI
-const char *WIFI_SSID     = "ssid";
-const char *WIFI_PASSWORD = "password";
+#define STRINGIZE(x) #x
+#define STRINGIZE_VALUE_OF(x) STRINGIZE(x)
+
+const char *WIFI_SSID     = STRINGIZE_VALUE_OF(MY_SSID);          //"ssid";
+const char *WIFI_PASSWORD = STRINGIZE_VALUE_OF(MY_SSID_PASSWORD); //"password";
 const unsigned long WIFI_TIMEOUT = 10000; // ms, WiFi connection timeout.
 
 // OPENWEATHERMAP API
 // OpenWeatherMap API key, https://openweathermap.org/
-const String OWM_APIKEY   = "abcdefghijklmnopqrstuvwxyz012345";
+const String OWM_APIKEY   = STRINGIZE_VALUE_OF(MY_OWM_APIKEY); //"abcdefghijklmnopqrstuvwxyz012345";
 const String OWM_ENDPOINT = "api.openweathermap.org";
+
 // OpenWeatherMap One Call 2.5 API is deprecated for all new free users
 // (accounts created after Summer 2022).
 //
@@ -66,7 +70,7 @@ const String OWM_ENDPOINT = "api.openweathermap.org";
 // - Go to https://home.openweathermap.org/subscriptions and set the "Calls per
 //   day (no more than)" to 1,000. This ensures you will never overrun the free
 //   calls.
-const String OWM_ONECALL_VERSION = "3.0";
+const String OWM_ONECALL_VERSION = "2.5";  //"3.0";
 
 // LOCATION
 // Set your latitude and longitude.
