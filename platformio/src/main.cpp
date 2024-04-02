@@ -200,6 +200,8 @@ void setup()
   String tmpStr = {};
   tm timeInfo = {};
 
+  initDisplay();
+
   // START WIFI
   int wifiRSSI = 0; // “Received Signal Strength Indicator"
   wl_status_t wifiStatus = startWiFi(wifiRSSI);

@@ -138,8 +138,9 @@ void GxEPD2_EPD::_reset()
 #define MAX_VCC 3.1
 #define VOLT2BINARY(x)  ((x) / MAX_VCC * 4096.)
 #define BINARY2VOLT(x)  ( (float)(x) / 4096. * MAX_VCC)
+#define WAIT _waitWhileBusy(__FUNCTION__, __LINE__)
 
-void GxEPD2_EPD::_waitWhileBusy(const char* comment, uint16_t busy_time)
+void GxEPD2_EPD::_waitWhileBusy(const char* caller_fn, uint16_t line)
 {
 	uint16_t adc;
 	uint16_t p2p;
@@ -147,6 +148,7 @@ void GxEPD2_EPD::_waitWhileBusy(const char* comment, uint16_t busy_time)
     static bool bInit=false;
 	static uint16_t peak_hi= 0, peak_lo = 0xFFFF, slice = VOLT2BINARY(.6);
 
+	//printf("%s called from %s:%d\n", __FUNCTION__, caller_fn, line);
 	if (bInit == false)
 	{
 	    pinMode(_busy, INPUT);    // set data/command pin to output mode
@@ -182,6 +184,8 @@ void GxEPD2_EPD::_waitWhileBusy(const char* comment, uint16_t busy_time)
 	      yield(); // avoid wdt
 		#endif
 	} while (adc < slice);
+
+	//printf("%s done... called from %s:%d\n", __FUNCTION__, caller_fn, line);
 
 	/*
 	printf("peak_lo = %3.2fv hi = %3.2fv adc > slice (%3.2fv > %3.2fv)\n",
@@ -243,6 +247,7 @@ void GxEPD2_EPD::_writeCommand(uint8_t c)
   if (_cs >= 0) digitalWrite(_cs, HIGH);
   if (_dc >= 0) digitalWrite(_dc, HIGH);
   _pSPIx->endTransaction();
+  WAIT;
 }
 
 void GxEPD2_EPD::_writeData(uint8_t d)
@@ -252,7 +257,6 @@ void GxEPD2_EPD::_writeData(uint8_t d)
   _pSPIx->transfer(d);
   if (_cs >= 0) digitalWrite(_cs, HIGH);
   _pSPIx->endTransaction();
-  _waitWhileBusy("",0);
 }
 
 void GxEPD2_EPD::_writeData(const uint8_t* data, uint16_t n)
@@ -265,7 +269,6 @@ void GxEPD2_EPD::_writeData(const uint8_t* data, uint16_t n)
   }
   if (_cs >= 0) digitalWrite(_cs, HIGH);
   _pSPIx->endTransaction();
-  _waitWhileBusy("",0);
 }
 
 void GxEPD2_EPD::_writeDataPGM(const uint8_t* data, uint16_t n, int16_t fill_with_zeroes)
@@ -283,7 +286,7 @@ void GxEPD2_EPD::_writeDataPGM(const uint8_t* data, uint16_t n, int16_t fill_wit
   }
   if (_cs >= 0) digitalWrite(_cs, HIGH);
   _pSPIx->endTransaction();
-  _waitWhileBusy("",0);
+  WAIT;
 }
 
 void GxEPD2_EPD::_writeDataPGM_sCS(const uint8_t* data, uint16_t n, int16_t fill_with_zeroes)
@@ -303,7 +306,7 @@ void GxEPD2_EPD::_writeDataPGM_sCS(const uint8_t* data, uint16_t n, int16_t fill
     if (_cs >= 0) digitalWrite(_cs, HIGH);
   }
   _pSPIx->endTransaction();
-  _waitWhileBusy("",0);
+  WAIT;
 }
 
 void GxEPD2_EPD::_writeCommandData(const uint8_t* pCommandData, uint8_t datalen)
@@ -319,7 +322,7 @@ void GxEPD2_EPD::_writeCommandData(const uint8_t* pCommandData, uint8_t datalen)
   }
   if (_cs >= 0) digitalWrite(_cs, HIGH);
   _pSPIx->endTransaction();
-  _waitWhileBusy("",0);
+  WAIT;
 }
 
 void GxEPD2_EPD::_writeCommandDataPGM(const uint8_t* pCommandData, uint8_t datalen)
@@ -335,7 +338,7 @@ void GxEPD2_EPD::_writeCommandDataPGM(const uint8_t* pCommandData, uint8_t datal
   }
   if (_cs >= 0) digitalWrite(_cs, HIGH);
   _pSPIx->endTransaction();
-  _waitWhileBusy("",0);
+  WAIT;
 }
 
 void GxEPD2_EPD::_startTransfer()

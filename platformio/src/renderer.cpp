@@ -256,6 +256,8 @@ void powerOffDisplay()
   display.hibernate(); // turns powerOff() and sets controller to deep sleep for
                        // minimum power use
   digitalWrite(PIN_EPD_PWR, LOW);
+  printf("powering off display\n");
+
   return;
 } // end initDisplay
 

@@ -19,11 +19,11 @@
 #include "config.h"
 
 // PINS
-// The configuration below is intended for use with the project's official 
+// The configuration below is intended for use with the project's official
 // wiring diagrams using the FireBeetle 2 ESP32-E microcontroller board.
 //
 // Note: LED_BUILTIN pin will be disabled to reduce power draw.  Refer to your
-//       board's pinout to ensure you avoid using a pin with this shared 
+//       board's pinout to ensure you avoid using a pin with this shared
 //       functionality.
 //
 // ADC pin used to measure battery voltage
@@ -75,10 +75,10 @@ const String OWM_ONECALL_VERSION = "2.5";  //"3.0";
 // LOCATION
 // Set your latitude and longitude.
 // (used to get weather data as part of API requests to OpenWeatherMap)
-const String LAT = "40.7128";
-const String LON = "-74.0060";
+const String LAT = "45.2946212";
+const String LON = "-75.8637158";
 // City name that will be shown in the top-right corner of the display.
-const String CITY_STRING = "New York";
+const String CITY_STRING = "Kanata Ontario";
 
 // TIME
 // For list of time zones see
@@ -87,13 +87,13 @@ const char *TIMEZONE = "EST5EDT,M3.2.0,M11.1.0";
 // Time format used when displaying sunrise/set times. (Max 11 characters)
 // For more information about formatting see
 // https://man7.org/linux/man-pages/man3/strftime.3.html
-// const char *TIME_FORMAT = "%l:%M%P"; // 12-hour ex: 1:23am  11:00pm
-const char *TIME_FORMAT = "%H:%M";   // 24-hour ex: 01:23   23:00
+const char *TIME_FORMAT = "%l:%M%P"; // 12-hour ex: 1:23am  11:00pm
+//const char *TIME_FORMAT = "%H:%M";   // 24-hour ex: 01:23   23:00
 // Time format used when displaying axis labels. (Max 11 characters)
 // For more information about formatting see
 // https://man7.org/linux/man-pages/man3/strftime.3.html
-// const char *HOUR_FORMAT = "%l%P"; // 12-hour ex: 1am  11pm
-const char *HOUR_FORMAT = "%H";      // 24-hour ex: 01   23
+const char *HOUR_FORMAT = "%l%P"; // 12-hour ex: 1am  11pm
+//const char *HOUR_FORMAT = "%H";      // 24-hour ex: 01   23
 // Date format used when displaying date in top-right corner.
 // For more information about formatting see
 // https://man7.org/linux/man-pages/man3/strftime.3.html
