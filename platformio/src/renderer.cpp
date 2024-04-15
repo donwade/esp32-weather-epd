@@ -224,8 +224,11 @@ void drawMultiLnString(int16_t x, int16_t y, const String &text,
  */
 void initDisplay()
 {
-  pinMode(PIN_EPD_PWR, OUTPUT);
-  digitalWrite(PIN_EPD_PWR, HIGH);
+  if (PIN_EPD_PWR)
+  {
+     pinMode(PIN_EPD_PWR, OUTPUT);
+     digitalWrite(PIN_EPD_PWR, HIGH);
+  }
 #ifdef DRIVER_WAVESHARE
   display.init(115200, true, 2, false);
   // remap spi for waveshare
@@ -255,7 +258,7 @@ void powerOffDisplay()
 {
   display.hibernate(); // turns powerOff() and sets controller to deep sleep for
                        // minimum power use
-  digitalWrite(PIN_EPD_PWR, LOW);
+  if (PIN_EPD_PWR) digitalWrite(PIN_EPD_PWR, LOW);
   printf("powering off display\n");
 
   return;
