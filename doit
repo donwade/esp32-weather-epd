@@ -1,0 +1,5 @@
+#!/bin/bash
+cd platformio
+FRONT_END="-DMY_SSID=\"$MY_SSID\" -DMY_SSID_PASSWORD=\"$MY_PSK\" -DMY_OWM_APIKEY=\"$OPENWEATHER_APIKEY\" "
+export PLATFORMIO_BUILD_FLAGS="$FRONT_END"
+pbuild $* 
