@@ -162,7 +162,9 @@ bool waitForSNTPSync(tm *timeInfo)
 
   // This string is printed to terminal to help with debugging. The API key is
   // censored to reduce the risk of users exposing their key.
+
   String sanitizedUri = OWM_ENDPOINT + uri + "&appid={API key}";
+  // debug String sanitizedUri = OWM_ENDPOINT + uri + "&appid=" + OWM_APIKEY;
 
   uri += "&appid=" + OWM_APIKEY;
 
