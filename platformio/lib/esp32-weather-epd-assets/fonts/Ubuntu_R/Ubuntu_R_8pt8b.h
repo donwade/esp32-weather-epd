@@ -1,4 +1,4 @@
-const uint8_t Ubuntu_R_8pt8bBitmaps[] PROGMEM = {
+const uint8_t Ubuntu_R_8pt8bBitmaps[] /* PROGMEM */ = {
   0x00, 0xFE, 0x60, 0x99, 0x99, 0x11, 0x08, 0x84, 0x5F, 0xF2, 0x21, 0x10,
   0x89, 0xFF, 0x44, 0x22, 0x11, 0x00, 0x10, 0x21, 0xF4, 0x08, 0x10, 0x18,
   0x08, 0x0C, 0x04, 0x08, 0x1F, 0xC2, 0x04, 0x00, 0x70, 0x48, 0x88, 0x89,
@@ -183,7 +183,7 @@ const uint8_t Ubuntu_R_8pt8bBitmaps[] PROGMEM = {
   0x00, 0x28, 0x50, 0x00, 0x08, 0x28, 0x91, 0x22, 0x28, 0x50, 0x40, 0x81,
   0x04, 0x30, 0x00 };
 
-const GFXglyph Ubuntu_R_8pt8bGlyphs[] PROGMEM = {
+const GFXglyph Ubuntu_R_8pt8bGlyphs[] /* PROGMEM */ = {
   {     0,   1,   1,   4,    0,    0 },   // 0x20 ' '
   {     1,   1,  11,   4,    1,  -10 },   // 0x21 '!'
   {     3,   4,   4,   7,    1,  -12 },   // 0x22 '"'
@@ -409,7 +409,7 @@ const GFXglyph Ubuntu_R_8pt8bGlyphs[] PROGMEM = {
   {  2159,   7,  15,   9,    1,  -11 },   // 0xFE 'þ'
   {  2173,   7,  15,   7,    0,  -11 } }; // 0xFF 'ÿ'
 
-const GFXfont Ubuntu_R_8pt8b PROGMEM = {
+const GFXfont Ubuntu_R_8pt8b /* PROGMEM */ = {
   (uint8_t  *)Ubuntu_R_8pt8bBitmaps,
   (GFXglyph *)Ubuntu_R_8pt8bGlyphs,
   0x20, 0xFF, 18 };

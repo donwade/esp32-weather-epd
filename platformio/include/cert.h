@@ -15,8 +15,8 @@
 // CN: *.openweathermap.org => name: __openweathermap_org
 // not valid before: 2023-06-30 00:00:00
 // not valid after:  2024-07-30 23:59:59
-const char fingerprint___openweathermap_org[] PROGMEM = "a6:2a:18:c6:c9:81:08:64:ba:69:73:ef:44:1e:0a:a3:fe:fa:a5:4d";
-const char pubkey___openweathermap_org[] PROGMEM = R"PUBKEY(
+const char fingerprint___openweathermap_org[] /* PROGMEM */ = "a6:2a:18:c6:c9:81:08:64:ba:69:73:ef:44:1e:0a:a3:fe:fa:a5:4d";
+const char pubkey___openweathermap_org[] /* PROGMEM */ = R"PUBKEY(
 -----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2DMTq6QbiQ6N/PK6u6dv
 8J1w5/w/GLm1d7J3daL80/15qRlsxUEpM78/OWmEs60kKSfyOVyxOHrVoXMfEhIx
@@ -32,7 +32,7 @@ TQIDAQAB
 // CN: Sectigo RSA Domain Validation Secure Server CA => name: Sectigo_RSA_Domain_Validation_Secure_Server_CA
 // not valid before: 2018-11-02 00:00:00
 // not valid after:  2030-12-31 23:59:59
-const char cert_Sectigo_RSA_Domain_Validation_Secure_Server_CA[] PROGMEM = R"CERT(
+const char cert_Sectigo_RSA_Domain_Validation_Secure_Server_CA[] /* PROGMEM */ = R"CERT(
 -----BEGIN CERTIFICATE-----
 MIIGEzCCA/ugAwIBAgIQfVtRJrR2uhHbdBYLvFMNpzANBgkqhkiG9w0BAQwFADCB
 iDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCk5ldyBKZXJzZXkxFDASBgNVBAcTC0pl
@@ -74,7 +74,7 @@ yOGBQMkKW+ESPMFgKuOXwIlCypTPRpgSabuY0MLTDXJLR27lk8QyKGOHQ+SwMj4K
 // CN: USERTrust RSA Certification Authority => name: USERTrust_RSA_Certification_Authority
 // not valid before: 2019-03-12 00:00:00
 // not valid after:  2028-12-31 23:59:59
-const char cert_USERTrust_RSA_Certification_Authority[] PROGMEM = R"CERT(
+const char cert_USERTrust_RSA_Certification_Authority[] /* PROGMEM */ = R"CERT(
 -----BEGIN CERTIFICATE-----
 MIIFgTCCBGmgAwIBAgIQOXJEOvkit1HX02wQ3TE1lTANBgkqhkiG9w0BAQwFADB7
 MQswCQYDVQQGEwJHQjEbMBkGA1UECAwSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYD

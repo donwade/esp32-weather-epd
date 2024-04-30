@@ -1,4 +1,4 @@
-const uint8_t Quicksand_Regular_22pt8bBitmaps[] PROGMEM = {
+const uint8_t Quicksand_Regular_22pt8bBitmaps[] /* PROGMEM */ = {
   0x00, 0x66, 0x66, 0x66, 0x66, 0x66, 0x66, 0x66, 0x66, 0x66, 0x66, 0x64,
   0x00, 0x00, 0x6F, 0xF6, 0x70, 0x7B, 0x83, 0x9C, 0x1C, 0xE0, 0xE6, 0x07,
   0x70, 0x33, 0x81, 0x9C, 0x1C, 0xC0, 0xC6, 0x06, 0x30, 0x30, 0x00, 0x60,
@@ -1315,7 +1315,7 @@ const uint8_t Quicksand_Regular_22pt8bBitmaps[] PROGMEM = {
   0x00, 0x1C, 0x00, 0x07, 0x00, 0x01, 0x80, 0x00, 0xE0, 0x00, 0x71, 0xC0,
   0x78, 0x7F, 0xFC, 0x0F, 0xFE, 0x00, 0x18, 0x00 };
 
-const GFXglyph Quicksand_Regular_22pt8bGlyphs[] PROGMEM = {
+const GFXglyph Quicksand_Regular_22pt8bGlyphs[] /* PROGMEM */ = {
   {     0,   1,   1,  12,    0,    0 },   // 0x20 ' '
   {     1,   4,  30,   8,    2,  -29 },   // 0x21 '!'
   {    16,  13,  11,  17,    2,  -29 },   // 0x22 '"'
@@ -1541,7 +1541,7 @@ const GFXglyph Quicksand_Regular_22pt8bGlyphs[] PROGMEM = {
   { 15580,  21,  41,  26,    3,  -31 },   // 0xFE 'þ'
   { 15688,  18,  39,  24,    3,  -29 } }; // 0xFF 'ÿ'
 
-const GFXfont Quicksand_Regular_22pt8b PROGMEM = {
+const GFXfont Quicksand_Regular_22pt8b /* PROGMEM */ = {
   (uint8_t  *)Quicksand_Regular_22pt8bBitmaps,
   (GFXglyph *)Quicksand_Regular_22pt8bGlyphs,
   0x20, 0xFF, 54 };

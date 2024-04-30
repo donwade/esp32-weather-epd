@@ -1,4 +1,4 @@
-const uint8_t Poppins_Regular_26pt8bBitmaps[] PROGMEM = {
+const uint8_t Poppins_Regular_26pt8bBitmaps[] /* PROGMEM */ = {
   0x00, 0xFB, 0xEF, 0xBE, 0xFB, 0xEF, 0xBE, 0xFB, 0xEF, 0xBE, 0xFB, 0xEF,
   0xBE, 0xFB, 0xEF, 0xBE, 0xFB, 0xEF, 0xBE, 0xF8, 0x00, 0x00, 0x01, 0xEF,
   0xFF, 0xFF, 0xF7, 0x80, 0xF1, 0xFE, 0x3F, 0xC7, 0xF8, 0xFF, 0x1F, 0xE3,
@@ -1978,7 +1978,7 @@ const uint8_t Poppins_Regular_26pt8bBitmaps[] PROGMEM = {
   0xE0, 0x00, 0x00, 0x78, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x03, 0xE0, 0x00,
   0x00 };
 
-const GFXglyph Poppins_Regular_26pt8bGlyphs[] PROGMEM = {
+const GFXglyph Poppins_Regular_26pt8bGlyphs[] /* PROGMEM */ = {
   {     0,   1,   1,  14,    0,    0 },   // 0x20 ' '
   {     1,   6,  35,  14,    4,  -34 },   // 0x21 '!'
   {    28,  11,  10,  15,    2,  -39 },   // 0x22 '"'
@@ -2204,7 +2204,7 @@ const GFXglyph Poppins_Regular_26pt8bGlyphs[] PROGMEM = {
   { 23380,  28,  51,  34,    4,  -37 },   // 0xFE 'þ'
   { 23559,  27,  49,  28,    1,  -35 } }; // 0xFF 'ÿ'
 
-const GFXfont Poppins_Regular_26pt8b PROGMEM = {
+const GFXfont Poppins_Regular_26pt8b /* PROGMEM */ = {
   (uint8_t  *)Poppins_Regular_26pt8bBitmaps,
   (GFXglyph *)Poppins_Regular_26pt8bGlyphs,
   0x20, 0xFF, 76 };

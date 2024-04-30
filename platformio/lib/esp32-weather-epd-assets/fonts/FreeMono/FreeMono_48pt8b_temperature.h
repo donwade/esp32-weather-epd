@@ -1,4 +1,4 @@
-const uint8_t FreeMono_48pt8b_temperatureBitmaps[] PROGMEM = {
+const uint8_t FreeMono_48pt8b_temperatureBitmaps[] /* PROGMEM */ = {
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
   0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xDF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
   0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xBF, 0xFF, 0xFF, 0xFF, 0xFF, 0xC0, 0x1F,
@@ -249,7 +249,7 @@ const uint8_t FreeMono_48pt8b_temperatureBitmaps[] PROGMEM = {
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
   0x00, 0x00, 0x00, 0x00, 0x00 };
 
-const GFXglyph FreeMono_48pt8b_temperatureGlyphs[] PROGMEM = {
+const GFXglyph FreeMono_48pt8b_temperatureGlyphs[] /* PROGMEM */ = {
   {     0,   1,   1,  56,    0,    0 },   // 0x20 ' '
   {     1,   1,   1,  56,    0,    0 },   // 0x21 '!'
   {     2,   1,   1,  56,    0,    0 },   // 0x22 '"'
@@ -475,7 +475,7 @@ const GFXglyph FreeMono_48pt8b_temperatureGlyphs[] PROGMEM = {
   {  2979,   1,   1,  56,    0,    0 },   // 0xFE 'þ'
   {  2980,   1,   1,  56,    0,    0 } }; // 0xFF 'ÿ'
 
-const GFXfont FreeMono_48pt8b_temperature PROGMEM = {
+const GFXfont FreeMono_48pt8b_temperature /* PROGMEM */ = {
   (uint8_t  *)FreeMono_48pt8b_temperatureBitmaps,
   (GFXglyph *)FreeMono_48pt8b_temperatureGlyphs,
   0x20, 0xFF, 94 };

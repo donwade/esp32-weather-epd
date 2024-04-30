@@ -1,4 +1,4 @@
-const uint8_t Raleway_Regular_22pt8bBitmaps[] PROGMEM = {
+const uint8_t Raleway_Regular_22pt8bBitmaps[] /* PROGMEM */ = {
   0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFE, 0x00, 0x03, 0xFF,
   0xF8, 0xEF, 0xDF, 0xBF, 0x7E, 0xFD, 0xFB, 0xF7, 0x00, 0x30, 0x0E, 0x00,
   0x1C, 0x03, 0x00, 0x07, 0x00, 0xC0, 0x01, 0x80, 0x70, 0x00, 0x60, 0x1C,
@@ -1376,7 +1376,7 @@ const uint8_t Raleway_Regular_22pt8bBitmaps[] PROGMEM = {
   0x00, 0x07, 0x00, 0x00, 0x38, 0x00, 0x03, 0xC0, 0x00, 0x1C, 0x00, 0x07,
   0xE0, 0x00, 0x3E, 0x00, 0x01, 0xE0, 0x00 };
 
-const GFXglyph Raleway_Regular_22pt8bGlyphs[] PROGMEM = {
+const GFXglyph Raleway_Regular_22pt8bGlyphs[] /* PROGMEM */ = {
   {     0,   1,   1,  11,    0,    0 },   // 0x20 ' '
   {     1,   3,  31,  11,    4,  -30 },   // 0x21 '!'
   {    13,   7,   8,  13,    3,  -30 },   // 0x22 '"'
@@ -1602,7 +1602,7 @@ const GFXglyph Raleway_Regular_22pt8bGlyphs[] PROGMEM = {
   { 16297,  21,  40,  26,    3,  -30 },   // 0xFE 'þ'
   { 16402,  21,  40,  23,    1,  -30 } }; // 0xFF 'ÿ'
 
-const GFXfont Raleway_Regular_22pt8b PROGMEM = {
+const GFXfont Raleway_Regular_22pt8b /* PROGMEM */ = {
   (uint8_t  *)Raleway_Regular_22pt8bBitmaps,
   (GFXglyph *)Raleway_Regular_22pt8bGlyphs,
   0x20, 0xFF, 51 };

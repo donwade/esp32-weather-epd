@@ -1,4 +1,4 @@
-const uint8_t FreeMono_6pt8bBitmaps[] PROGMEM = {
+const uint8_t FreeMono_6pt8bBitmaps[] /* PROGMEM */ = {
   0x00, 0xF2, 0xB6, 0x80, 0x12, 0x94, 0xE6, 0x39, 0x88, 0x22, 0xA0, 0x83,
   0x06, 0x4C, 0x20, 0xE5, 0x12, 0xE3, 0x24, 0xC0, 0x72, 0x11, 0x49, 0x38,
   0xE0, 0x5A, 0xA5, 0xA9, 0x6A, 0x25, 0x5C, 0xA0, 0x21, 0x08, 0xE2, 0x10,
@@ -100,7 +100,7 @@ const uint8_t FreeMono_6pt8bBitmaps[] PROGMEM = {
   0x42, 0x00, 0x41, 0x07, 0x91, 0x45, 0x16, 0x94, 0x40, 0x50, 0x23, 0x25,
   0x30, 0x88, 0x40 };
 
-const GFXglyph FreeMono_6pt8bGlyphs[] PROGMEM = {
+const GFXglyph FreeMono_6pt8bGlyphs[] /* PROGMEM */ = {
   {     0,   1,   1,   7,    0,    0 },   // 0x20 ' '
   {     1,   1,   7,   7,    3,   -6 },   // 0x21 '!'
   {     2,   3,   3,   7,    2,   -6 },   // 0x22 '"'
@@ -326,7 +326,7 @@ const GFXglyph FreeMono_6pt8bGlyphs[] PROGMEM = {
   {  1178,   6,   9,   7,    0,   -6 },   // 0xFE 'þ'
   {  1185,   5,   9,   7,    1,   -6 } }; // 0xFF 'ÿ'
 
-const GFXfont FreeMono_6pt8b PROGMEM = {
+const GFXfont FreeMono_6pt8b /* PROGMEM */ = {
   (uint8_t  *)FreeMono_6pt8bBitmaps,
   (GFXglyph *)FreeMono_6pt8bGlyphs,
   0x20, 0xFF, 12 };

@@ -1,4 +1,4 @@
-const uint8_t RobotoSlab_Regular_5pt8bBitmaps[] PROGMEM = {
+const uint8_t RobotoSlab_Regular_5pt8bBitmaps[] /* PROGMEM */ = {
   0x00, 0xFA, 0xE0, 0x28, 0xA7, 0xCA, 0xF9, 0x45, 0x00, 0x23, 0x92, 0x83,
   0x06, 0x2E, 0x20, 0x61, 0x53, 0xA0, 0x82, 0xC5, 0x53, 0x00, 0x71, 0x45,
   0x18, 0x96, 0x27, 0xC0, 0xC0, 0x6A, 0xAA, 0x90, 0x89, 0x22, 0x4A, 0x50,
@@ -85,7 +85,7 @@ const uint8_t RobotoSlab_Regular_5pt8bBitmaps[] PROGMEM = {
   0xD2, 0x50, 0xC3, 0x08, 0x60, 0xC2, 0x1E, 0x94, 0xA5, 0xE8, 0xE0, 0x50,
   0x0D, 0xD2, 0x50, 0xC3, 0x08, 0x60 };
 
-const GFXglyph RobotoSlab_Regular_5pt8bGlyphs[] PROGMEM = {
+const GFXglyph RobotoSlab_Regular_5pt8bGlyphs[] /* PROGMEM */ = {
   {     0,   1,   1,   2,    0,    0 },   // 0x20 ' '
   {     1,   1,   7,   2,    1,   -6 },   // 0x21 '!'
   {     2,   2,   2,   4,    1,   -6 },   // 0x22 '"'
@@ -311,7 +311,7 @@ const GFXglyph RobotoSlab_Regular_5pt8bGlyphs[] PROGMEM = {
   {  1001,   5,   9,   6,    0,   -6 },   // 0xFE 'þ'
   {  1007,   6,   9,   6,    0,   -6 } }; // 0xFF 'ÿ'
 
-const GFXfont RobotoSlab_Regular_5pt8b PROGMEM = {
+const GFXfont RobotoSlab_Regular_5pt8b /* PROGMEM */ = {
   (uint8_t  *)RobotoSlab_Regular_5pt8bBitmaps,
   (GFXglyph *)RobotoSlab_Regular_5pt8bGlyphs,
   0x20, 0xFF, 13 };

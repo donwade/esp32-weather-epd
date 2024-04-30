@@ -1,4 +1,4 @@
-const uint8_t OpenSans_Regular_24pt8bBitmaps[] PROGMEM = {
+const uint8_t OpenSans_Regular_24pt8bBitmaps[] /* PROGMEM */ = {
   0x00, 0x7D, 0xE7, 0x9E, 0x79, 0xE7, 0x9E, 0x79, 0xE7, 0x9E, 0x78, 0xE3,
   0x8E, 0x38, 0xE3, 0x8E, 0x38, 0xE3, 0x8C, 0x00, 0x00, 0x00, 0x79, 0xFF,
   0xFF, 0x7D, 0xE0, 0xF0, 0x7F, 0x83, 0xFC, 0x1D, 0xE0, 0xEF, 0x07, 0x78,
@@ -1368,7 +1368,7 @@ const uint8_t OpenSans_Regular_24pt8bBitmaps[] PROGMEM = {
   0x00, 0x01, 0xE0, 0x00, 0x07, 0xE0, 0x00, 0xFF, 0xC0, 0x00, 0xFF, 0x80,
   0x00, 0xFE, 0x00, 0x00 };
 
-const GFXglyph OpenSans_Regular_24pt8bGlyphs[] PROGMEM = {
+const GFXglyph OpenSans_Regular_24pt8bGlyphs[] /* PROGMEM */ = {
   {     0,   1,   1,  12,    0,    0 },   // 0x20 ' '
   {     1,   6,  34,  12,    3,  -33 },   // 0x21 '!'
   {    27,  13,  12,  19,    3,  -33 },   // 0x22 '"'
@@ -1594,7 +1594,7 @@ const GFXglyph OpenSans_Regular_24pt8bGlyphs[] PROGMEM = {
   { 16143,  22,  47,  29,    4,  -35 },   // 0xFE 'þ'
   { 16273,  24,  45,  24,    0,  -33 } }; // 0xFF 'ÿ'
 
-const GFXfont OpenSans_Regular_24pt8b PROGMEM = {
+const GFXfont OpenSans_Regular_24pt8b /* PROGMEM */ = {
   (uint8_t  *)OpenSans_Regular_24pt8bBitmaps,
   (GFXglyph *)OpenSans_Regular_24pt8bGlyphs,
   0x20, 0xFF, 64 };

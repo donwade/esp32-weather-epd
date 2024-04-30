@@ -1,4 +1,4 @@
-const uint8_t UbuntuMono_R_16pt8bBitmaps[] PROGMEM = {
+const uint8_t UbuntuMono_R_16pt8bBitmaps[] /* PROGMEM */ = {
   0x00, 0x77, 0x77, 0x77, 0x77, 0x77, 0x77, 0x00, 0x06, 0xFF, 0x60, 0xC7,
   0x8F, 0x1E, 0x3C, 0x78, 0xF1, 0xE3, 0x0E, 0x38, 0x38, 0xE0, 0xE3, 0x87,
   0x1C, 0x1C, 0x73, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x1C, 0x70, 0xF3, 0xC3,
@@ -550,7 +550,7 @@ const uint8_t UbuntuMono_R_16pt8bBitmaps[] PROGMEM = {
   0x80, 0x7C, 0x01, 0xF0, 0x07, 0x80, 0x3E, 0x0F, 0xF0, 0x3F, 0x80, 0xFC,
   0x00 };
 
-const GFXglyph UbuntuMono_R_16pt8bGlyphs[] PROGMEM = {
+const GFXglyph UbuntuMono_R_16pt8bGlyphs[] /* PROGMEM */ = {
   {     0,   1,   1,  16,    0,    0 },   // 0x20 ' '
   {     1,   4,  19,  16,    6,  -18 },   // 0x21 '!'
   {    11,   7,   8,  16,    4,  -20 },   // 0x22 '"'
@@ -776,7 +776,7 @@ const GFXglyph UbuntuMono_R_16pt8bGlyphs[] PROGMEM = {
   {  6502,  13,  26,  16,    2,  -20 },   // 0xFE 'þ'
   {  6545,  14,  25,  16,    1,  -19 } }; // 0xFF 'ÿ'
 
-const GFXfont UbuntuMono_R_16pt8b PROGMEM = {
+const GFXfont UbuntuMono_R_16pt8b /* PROGMEM */ = {
   (uint8_t  *)UbuntuMono_R_16pt8bBitmaps,
   (GFXglyph *)UbuntuMono_R_16pt8bGlyphs,
   0x20, 0xFF, 31 };

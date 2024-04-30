@@ -1,4 +1,4 @@
-const uint8_t Lato_Regular_11pt8bBitmaps[] PROGMEM = {
+const uint8_t Lato_Regular_11pt8bBitmaps[] /* PROGMEM */ = {
   0x00, 0x6D, 0xB6, 0xDB, 0x6C, 0x07, 0xD8, 0x9C, 0xE7, 0x38, 0x80, 0x08,
   0xC3, 0x10, 0x62, 0x0C, 0xCF, 0xFF, 0xFF, 0x8C, 0x41, 0x88, 0x33, 0x1F,
   0xFB, 0xFF, 0x11, 0x06, 0x20, 0xCC, 0x19, 0x80, 0x02, 0x00, 0x40, 0x08,
@@ -352,7 +352,7 @@ const uint8_t Lato_Regular_11pt8bBitmaps[] PROGMEM = {
   0x31, 0x86, 0x31, 0x83, 0x30, 0x6C, 0x0D, 0x80, 0xE0, 0x1C, 0x01, 0x80,
   0x60, 0x0C, 0x03, 0x00, 0x60, 0x00 };
 
-const GFXglyph Lato_Regular_11pt8bGlyphs[] PROGMEM = {
+const GFXglyph Lato_Regular_11pt8bGlyphs[] /* PROGMEM */ = {
   {     0,   1,   1,   4,    0,    0 },   // 0x20 ' '
   {     1,   3,  15,   8,    2,  -14 },   // 0x21 '!'
   {     7,   5,   5,   9,    2,  -14 },   // 0x22 '"'
@@ -578,7 +578,7 @@ const GFXglyph Lato_Regular_11pt8bGlyphs[] PROGMEM = {
   {  4168,   9,  20,  12,    2,  -15 },   // 0xFE 'þ'
   {  4191,  11,  19,  11,    0,  -14 } }; // 0xFF 'ÿ'
 
-const GFXfont Lato_Regular_11pt8b PROGMEM = {
+const GFXfont Lato_Regular_11pt8b /* PROGMEM */ = {
   (uint8_t  *)Lato_Regular_11pt8bBitmaps,
   (GFXglyph *)Lato_Regular_11pt8bGlyphs,
   0x20, 0xFF, 26 };

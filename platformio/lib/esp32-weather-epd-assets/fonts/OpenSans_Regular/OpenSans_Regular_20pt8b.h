@@ -1,4 +1,4 @@
-const uint8_t OpenSans_Regular_20pt8bBitmaps[] PROGMEM = {
+const uint8_t OpenSans_Regular_20pt8bBitmaps[] /* PROGMEM */ = {
   0x00, 0xFF, 0xFF, 0xFF, 0x77, 0x77, 0x77, 0x76, 0x66, 0x66, 0x60, 0x00,
   0x07, 0xFF, 0xF7, 0xE1, 0xF8, 0x7E, 0x1F, 0x87, 0xE1, 0xF8, 0x7E, 0x1F,
   0x06, 0xC1, 0xB0, 0x60, 0x00, 0x60, 0x70, 0x01, 0xC0, 0xC0, 0x03, 0x81,
@@ -949,7 +949,7 @@ const uint8_t OpenSans_Regular_20pt8bBitmaps[] PROGMEM = {
   0x00, 0x3C, 0x00, 0x07, 0x80, 0x0F, 0xF0, 0x00, 0xFE, 0x00, 0x0F, 0xC0,
   0x00 };
 
-const GFXglyph OpenSans_Regular_20pt8bGlyphs[] PROGMEM = {
+const GFXglyph OpenSans_Regular_20pt8bGlyphs[] /* PROGMEM */ = {
   {     0,   1,   1,  10,    0,    0 },   // 0x20 ' '
   {     1,   4,  28,  10,    3,  -27 },   // 0x21 '!'
   {    15,  10,  10,  16,    3,  -27 },   // 0x22 '"'
@@ -1175,7 +1175,7 @@ const GFXglyph OpenSans_Regular_20pt8bGlyphs[] PROGMEM = {
   { 11189,  19,  39,  24,    3,  -29 },   // 0xFE 'þ'
   { 11282,  20,  38,  20,    0,  -28 } }; // 0xFF 'ÿ'
 
-const GFXfont OpenSans_Regular_20pt8b PROGMEM = {
+const GFXfont OpenSans_Regular_20pt8b /* PROGMEM */ = {
   (uint8_t  *)OpenSans_Regular_20pt8bBitmaps,
   (GFXglyph *)OpenSans_Regular_20pt8bGlyphs,
   0x20, 0xFF, 53 };

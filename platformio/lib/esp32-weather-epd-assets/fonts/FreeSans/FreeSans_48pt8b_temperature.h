@@ -1,4 +1,4 @@
-const uint8_t FreeSans_48pt8b_temperatureBitmaps[] PROGMEM = {
+const uint8_t FreeSans_48pt8b_temperatureBitmaps[] /* PROGMEM */ = {
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
   0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
   0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0xFF, 0xFF,
@@ -333,7 +333,7 @@ const uint8_t FreeSans_48pt8b_temperatureBitmaps[] PROGMEM = {
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
   0x00, 0x00 };
 
-const GFXglyph FreeSans_48pt8b_temperatureGlyphs[] PROGMEM = {
+const GFXglyph FreeSans_48pt8b_temperatureGlyphs[] /* PROGMEM */ = {
   {     0,   1,   1,  75,    0,    0 },   // 0x20 ' '
   {     1,   1,   1,  75,    0,    0 },   // 0x21 '!'
   {     2,   1,   1,  75,    0,    0 },   // 0x22 '"'
@@ -559,7 +559,7 @@ const GFXglyph FreeSans_48pt8b_temperatureGlyphs[] PROGMEM = {
   {  3984,   1,   1,  75,    0,    0 },   // 0xFE 'þ'
   {  3985,   1,   1,  75,    0,    0 } }; // 0xFF 'ÿ'
 
-const GFXfont FreeSans_48pt8b_temperature PROGMEM = {
+const GFXfont FreeSans_48pt8b_temperature /* PROGMEM */ = {
   (uint8_t  *)FreeSans_48pt8b_temperatureBitmaps,
   (GFXglyph *)FreeSans_48pt8b_temperatureGlyphs,
   0x20, 0xFF, 113 };

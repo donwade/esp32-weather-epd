@@ -1,4 +1,4 @@
-const uint8_t UbuntuMono_R_48pt8b_temperatureBitmaps[] PROGMEM = {
+const uint8_t UbuntuMono_R_48pt8b_temperatureBitmaps[] /* PROGMEM */ = {
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
   0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
   0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xE0, 0x0F, 0xC0, 0x7F, 0x83,
@@ -256,7 +256,7 @@ const uint8_t UbuntuMono_R_48pt8b_temperatureBitmaps[] PROGMEM = {
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
   0x00, 0x00, 0x00, 0x00 };
 
-const GFXglyph UbuntuMono_R_48pt8b_temperatureGlyphs[] PROGMEM = {
+const GFXglyph UbuntuMono_R_48pt8b_temperatureGlyphs[] /* PROGMEM */ = {
   {     0,   1,   1,  47,    0,    0 },   // 0x20 ' '
   {     1,   1,   1,  47,    0,    0 },   // 0x21 '!'
   {     2,   1,   1,  47,    0,    0 },   // 0x22 '"'
@@ -482,7 +482,7 @@ const GFXglyph UbuntuMono_R_48pt8b_temperatureGlyphs[] PROGMEM = {
   {  3062,   1,   1,  47,    0,    0 },   // 0xFE 'þ'
   {  3063,   1,   1,  47,    0,    0 } }; // 0xFF 'ÿ'
 
-const GFXfont UbuntuMono_R_48pt8b_temperature PROGMEM = {
+const GFXfont UbuntuMono_R_48pt8b_temperature /* PROGMEM */ = {
   (uint8_t  *)UbuntuMono_R_48pt8b_temperatureBitmaps,
   (GFXglyph *)UbuntuMono_R_48pt8b_temperatureGlyphs,
   0x20, 0xFF, 94 };

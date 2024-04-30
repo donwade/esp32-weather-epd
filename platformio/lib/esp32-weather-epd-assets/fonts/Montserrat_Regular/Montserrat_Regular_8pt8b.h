@@ -1,4 +1,4 @@
-const uint8_t Montserrat_Regular_8pt8bBitmaps[] PROGMEM = {
+const uint8_t Montserrat_Regular_8pt8bBitmaps[] /* PROGMEM */ = {
   0x00, 0xFF, 0x55, 0x1C, 0x99, 0x99, 0x08, 0x84, 0x41, 0x11, 0xFF, 0x11,
   0x04, 0x41, 0x13, 0xFF, 0x11, 0x08, 0x82, 0x20, 0x10, 0x10, 0x7E, 0xD2,
   0x90, 0x90, 0xD0, 0x3C, 0x16, 0x11, 0x11, 0x93, 0x7C, 0x10, 0x10, 0x70,
@@ -195,7 +195,7 @@ const uint8_t Montserrat_Regular_8pt8bBitmaps[] PROGMEM = {
   0x00, 0x00, 0x81, 0x41, 0x42, 0x22, 0x24, 0x14, 0x18, 0x18, 0x18, 0x10,
   0xE0 };
 
-const GFXglyph Montserrat_Regular_8pt8bGlyphs[] PROGMEM = {
+const GFXglyph Montserrat_Regular_8pt8bGlyphs[] /* PROGMEM */ = {
   {     0,   1,   1,   4,    0,    0 },   // 0x20 ' '
   {     1,   2,  11,   4,    1,  -10 },   // 0x21 '!'
   {     4,   4,   4,   6,    1,  -10 },   // 0x22 '"'
@@ -421,7 +421,7 @@ const GFXglyph Montserrat_Regular_8pt8bGlyphs[] PROGMEM = {
   {  2300,   8,  15,  11,    2,  -11 },   // 0xFE 'þ'
   {  2315,   8,  14,   9,    0,  -10 } }; // 0xFF 'ÿ'
 
-const GFXfont Montserrat_Regular_8pt8b PROGMEM = {
+const GFXfont Montserrat_Regular_8pt8b /* PROGMEM */ = {
   (uint8_t  *)Montserrat_Regular_8pt8bBitmaps,
   (GFXglyph *)Montserrat_Regular_8pt8bGlyphs,
   0x20, 0xFF, 19 };

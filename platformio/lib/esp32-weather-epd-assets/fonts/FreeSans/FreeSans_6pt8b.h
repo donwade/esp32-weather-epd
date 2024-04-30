@@ -1,4 +1,4 @@
-const uint8_t FreeSans_6pt8bBitmaps[] PROGMEM = {
+const uint8_t FreeSans_6pt8bBitmaps[] /* PROGMEM */ = {
   0x00, 0xFC, 0x80, 0xEC, 0x00, 0x24, 0xA7, 0xCA, 0x4B, 0xF5, 0x14, 0x39,
   0x59, 0x54, 0x38, 0x59, 0x55, 0x78, 0x40, 0x01, 0x1C, 0x89, 0x21, 0xD0,
   0x04, 0x02, 0x60, 0xA4, 0x49, 0x11, 0x80, 0x71, 0x45, 0x1C, 0x62, 0x58,
@@ -139,7 +139,7 @@ const uint8_t FreeSans_6pt8bBitmaps[] PROGMEM = {
   0x84, 0x3D, 0x18, 0xC6, 0x31, 0xF4, 0x20, 0x78, 0x22, 0x94, 0xA9, 0x46,
   0x21, 0x08, 0x80 };
 
-const GFXglyph FreeSans_6pt8bGlyphs[] PROGMEM = {
+const GFXglyph FreeSans_6pt8bGlyphs[] /* PROGMEM */ = {
   {     0,   1,   1,   3,    0,    0 },   // 0x20 ' '
   {     1,   1,   9,   4,    1,   -8 },   // 0x21 '!'
   {     3,   3,   3,   4,    0,   -8 },   // 0x22 '"'
@@ -365,7 +365,7 @@ const GFXglyph FreeSans_6pt8bGlyphs[] PROGMEM = {
   {  1644,   5,  11,   7,    1,   -8 },   // 0xFE 'þ'
   {  1651,   5,  12,   6,    0,   -8 } }; // 0xFF 'ÿ'
 
-const GFXfont FreeSans_6pt8b PROGMEM = {
+const GFXfont FreeSans_6pt8b /* PROGMEM */ = {
   (uint8_t  *)FreeSans_6pt8bBitmaps,
   (GFXglyph *)FreeSans_6pt8bGlyphs,
   0x20, 0xFF, 14 };
