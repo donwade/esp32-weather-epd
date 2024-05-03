@@ -669,8 +669,8 @@ void drawForecast(owm_daily_t *const daily, tm timeInfo)
     timeInfo.tm_wday = (timeInfo.tm_wday + 1) % 7; // increment to next day
 
     // high | low
-    display.setFont(&FONT_10pt8b); //+
-    drawString(x + 31, 98 + 69 / 2 + 38 - 6 + 12, "|", CENTER);
+    display.setFont(&FONT_11pt8b); //+
+    drawString(x + 31, 98 + 69 / 2 + 38 - 6 + 12, " / ", CENTER);
 #ifdef UNITS_TEMP_KELVIN
   hiStr = String(static_cast<int>(round(daily[i].temp.max)));
   loStr = String(static_cast<int>(round(daily[i].temp.min)));
@@ -687,8 +687,10 @@ void drawForecast(owm_daily_t *const daily, tm timeInfo)
   loStr = String(static_cast<int>(round(kelvin_to_fahrenheit(daily[i].temp.min)
                  ))) + "\xB0";
 #endif
-    drawString(x + 31 - 4, 98 + 69 / 2 + 38 - 6 + 12, hiStr, RIGHT);
-    drawString(x + 31 + 5, 98 + 69 / 2 + 38 - 6 + 12, loStr, LEFT);
+    drawString(x + 31 - 4, 98 + 69 / 2 + 38 - 6 + 12, hiStr, RIGHT );
+    drawString(x + 31 - 4, 98 + 69 / 2 + 38 - 6 + 12 + 20, loStr, RIGHT, ACCENT_COLOR);
+
+    //drawString(x + 31 + 5, 98 + 69 / 2 + 38 - 6 + 12, loStr, LEFT);
   }
 
   return;
@@ -1001,9 +1003,9 @@ void drawOutlookGraph(owm_hourly_t *const hourly, tm timeInfo)
     {
       for (int x = xPos0; x <= xPos1 + 1; x += 3)
       {
-		  display.drawPixel(x, yTick + (yTick % 2)-1, GxEPD_BLACK); //+ fatten
-		  display.drawPixel(x, yTick + (yTick % 2)+0, GxEPD_BLACK); //
-		  display.drawPixel(x, yTick + (yTick % 2)+1, GxEPD_BLACK); //+ fatten
+		  display.drawPixel(x, yTick + (yTick % 2)-1, GxEPD_RED); //+ fatten
+		  display.drawPixel(x, yTick + (yTick % 2)+0, GxEPD_RED); //
+		  display.drawPixel(x, yTick + (yTick % 2)+1, GxEPD_RED); //+ fatten
       }
     }
   }
@@ -1052,9 +1054,9 @@ void drawOutlookGraph(owm_hourly_t *const hourly, tm timeInfo)
 #endif
 
       // graph temperature
-      display.drawLine(x0_t    , y0_t    , x1_t    , y1_t    , ACCENT_COLOR);
-      display.drawLine(x0_t    , y0_t + 1, x1_t    , y1_t + 1, ACCENT_COLOR);
-      display.drawLine(x0_t - 1, y0_t    , x1_t - 1, y1_t    , ACCENT_COLOR);
+      display.drawLine(x0_t    , y0_t    , x1_t    , y1_t    , GxEPD_BLACK);
+      display.drawLine(x0_t    , y0_t + 1, x1_t    , y1_t + 1, GxEPD_BLACK);
+      display.drawLine(x0_t - 1, y0_t    , x1_t - 1, y1_t    , GxEPD_BLACK);
 
       display.drawLine(x0_t    , y0_t + 2, x1_t    , y1_t + 2, ACCENT_COLOR); //+
       display.drawLine(x0_t - 2, y0_t    , x1_t - 2, y1_t    , ACCENT_COLOR); //+
@@ -1100,6 +1102,7 @@ void drawOutlookGraph(owm_hourly_t *const hourly, tm timeInfo)
       time_t ts = hourly[i].dt;
       tm *timeInfo = localtime(&ts);
       _strftime(timeBuffer, sizeof(timeBuffer), HOUR_FORMAT, timeInfo);
+      timeBuffer[strlen(timeBuffer)-1] = 0; // knock of the m in am/pm
       drawString(xTick, yPos1 + 1 + 12 + 4 + 3, timeBuffer, CENTER);
     }
 
