@@ -355,7 +355,7 @@ void drawCurrentConditions(const owm_current_t &current,
 #endif
 
   // current weather data labels
-  display.setFont(&FONT_7pt8b);
+  display.setFont(&FONT_10pt8b); //+
   drawString(48, 204 + 10 + (48 + 8) * 0, TXT_SUNRISE, LEFT);
   drawString(48, 204 + 10 + (48 + 8) * 1, TXT_WIND, LEFT);
   drawString(48, 204 + 10 + (48 + 8) * 2, TXT_UV_INDEX, LEFT);
@@ -662,14 +662,14 @@ void drawForecast(owm_daily_t *const daily, tm timeInfo)
                                getForecastBitmap64(daily[i]),
                                64, 64, GxEPD_BLACK);
     // day of week label
-    display.setFont(&FONT_11pt8b);
+    display.setFont(&FONT_12pt8b); //+
     char dayBuffer[8] = {};
     _strftime(dayBuffer, sizeof(dayBuffer), "%a", &timeInfo); // abbrv'd day
     drawString(x + 31 - 2, 98 + 69 / 2 - 32 - 26 - 6 + 16, dayBuffer, CENTER);
     timeInfo.tm_wday = (timeInfo.tm_wday + 1) % 7; // increment to next day
 
     // high | low
-    display.setFont(&FONT_8pt8b);
+    display.setFont(&FONT_10pt8b); //+
     drawString(x + 31, 98 + 69 / 2 + 38 - 6 + 12, "|", CENTER);
 #ifdef UNITS_TEMP_KELVIN
   hiStr = String(static_cast<int>(round(daily[i].temp.max)));
@@ -812,10 +812,10 @@ void drawAlerts(std::vector<owm_alerts_t> &alerts,
 void drawLocationDate(const String &city, const String &date)
 {
   // location, date
-  display.setFont(&FONT_16pt8b);
-  drawString(DISP_WIDTH - 2, 23, city, RIGHT, ACCENT_COLOR);
+  display.setFont(&FONT_24pt8b);
+  drawString(DISP_WIDTH/2, 45, date, CENTER, ACCENT_COLOR);
   display.setFont(&FONT_12pt8b);
-  drawString(DISP_WIDTH - 2, 30 + 4 + 17, date, RIGHT);
+  drawString(DISP_WIDTH - 2, 30 + 4 + 17, city, RIGHT);
   return;
 } // end drawLocationDate
 
@@ -963,7 +963,7 @@ void drawOutlookGraph(owm_hourly_t *const hourly, tm timeInfo)
   {
     String dataStr;
     int yTick = static_cast<int>(yPos0 + (i * yInterval));
-    display.setFont(&FONT_8pt8b);
+    display.setFont(&FONT_10pt8b); //+
     // Temperature
     dataStr = String(tempBoundMax - (i * yTempMajorTicks));
 #if defined(UNITS_TEMP_CELSIUS) || defined(UNITS_TEMP_FAHRENHEIT)
@@ -993,7 +993,7 @@ void drawOutlookGraph(owm_hourly_t *const hourly, tm timeInfo)
 #endif
 
     drawString(xPos1 + 8, yTick + 4, dataStr, LEFT);
-    display.setFont(&FONT_5pt8b);
+    display.setFont(&FONT_8pt8b);  //+
     drawString(display.getCursorX(), yTick + 4, precip_unit, LEFT);
 
     // draw dotted line
@@ -1001,7 +1001,9 @@ void drawOutlookGraph(owm_hourly_t *const hourly, tm timeInfo)
     {
       for (int x = xPos0; x <= xPos1 + 1; x += 3)
       {
-        display.drawPixel(x, yTick + (yTick % 2), GxEPD_BLACK);
+		  display.drawPixel(x, yTick + (yTick % 2)-1, GxEPD_BLACK); //+ fatten
+		  display.drawPixel(x, yTick + (yTick % 2)+0, GxEPD_BLACK); //
+		  display.drawPixel(x, yTick + (yTick % 2)+1, GxEPD_BLACK); //+ fatten
       }
     }
   }
@@ -1010,7 +1012,7 @@ void drawOutlookGraph(owm_hourly_t *const hourly, tm timeInfo)
   int hourInterval = static_cast<int>(ceil(HOURLY_GRAPH_MAX
                                            / static_cast<float>(xMaxTicks)));
   float xInterval = (xPos1 - xPos0 - 1) / static_cast<float>(HOURLY_GRAPH_MAX);
-  display.setFont(&FONT_8pt8b);
+  display.setFont(&FONT_10pt8b);  //+ horizontal label
   for (int i = 0; i < HOURLY_GRAPH_MAX; ++i)
   {
     int xTick = static_cast<int>(xPos0 + (i * xInterval));
@@ -1053,6 +1055,12 @@ void drawOutlookGraph(owm_hourly_t *const hourly, tm timeInfo)
       display.drawLine(x0_t    , y0_t    , x1_t    , y1_t    , ACCENT_COLOR);
       display.drawLine(x0_t    , y0_t + 1, x1_t    , y1_t + 1, ACCENT_COLOR);
       display.drawLine(x0_t - 1, y0_t    , x1_t - 1, y1_t    , ACCENT_COLOR);
+
+      display.drawLine(x0_t    , y0_t + 2, x1_t    , y1_t + 2, ACCENT_COLOR); //+
+      display.drawLine(x0_t - 2, y0_t    , x1_t - 2, y1_t    , ACCENT_COLOR); //+
+      display.drawLine(x0_t    , y0_t + 3, x1_t    , y1_t + 3, ACCENT_COLOR); //+
+      display.drawLine(x0_t - 3, y0_t    , x1_t - 3, y1_t    , ACCENT_COLOR); //+
+
     }
 
 #ifdef UNITS_PRECIP_POP
