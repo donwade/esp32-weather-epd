@@ -815,9 +815,9 @@ void drawLocationDate(const String &city, const String &date)
 {
   // location, date
   display.setFont(&FONT_24pt8b);
-  drawString(DISP_WIDTH/2, 45, date, CENTER, ACCENT_COLOR);
-  display.setFont(&FONT_12pt8b);
-  drawString(DISP_WIDTH - 2, 30 + 4 + 17, city, RIGHT);
+  drawString(DISP_WIDTH -25 , 45, date, RIGHT , ACCENT_COLOR);
+  //display.setFont(&FONT_12pt8b);
+  //drawString(DISP_WIDTH - 2, 30 + 4 + 17, city, RIGHT);
   return;
 } // end drawLocationDate
 
